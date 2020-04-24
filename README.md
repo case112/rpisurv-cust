@@ -1,4 +1,29 @@
 # Rpisurv 2 - Raspberry pi surveillance an RPI IP Camera Monitor
+
+## Setup with PI
+- New Raspbian
+- terminal
+- cd Desktop
+- mkdir rpisurv
+- cd rpisurv
+- git init
+- git remote add origin https://github.com/case112/rpisurv-cust
+- git pull origin master
+
+- sudo nano /boot/config.txt
+- add gpu_mem=512
+
+- testida yhendust omxplayer rtsp://
+
+- sudo ./install.sh
+
+
+
+
+
+
+
+
 Join the community on https://community.rpisurv.net (Please use this place for support questions instead of github issues).<br/>
 Bug tracking https://github.com/SvenVD/rpisurv/issues.<br/>
 Follow us on facebook https://www.facebook.com/rpisurv.<br/>
