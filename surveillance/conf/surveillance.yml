@@ -2,24 +2,19 @@
 #THE FOLLOWING ARE EXAMPLES WITH ALL OPTIONS EXPLAINED, REMOVE OR ADAPT THEM WITH YOUR REAL CONFIG
 
 essentials:
-  #rpisurv will rotate over the following screens in the order they are configured here, if you only define one screen no rotation will happen
-
-  #If you enable this option no auto rotation will happen, but you will still be able to select a screen by pressing and holding a Function Key (F1-F12)
-  #Defaults to False
-  #disable_autorotation: False
-
+  
   screens:
-      #Start config for example screen one, this is the minimal config. This will show a 2x2 if all streams are connectable,
-      #otherwise rpisurv, by default, rearranges the screen to only show the connectable streams. To disable the latter set disable_probing_for_all_streams=True
-      #Force this screen to be shown by pressing and holding F1 or keypad 0
+
     - camera_streams:
         # Trendnet camera stream sample
         #- url: "rtsp://<user>:<password>@<camera IP>:<port 554>/videoMain"
+        # It's possible to add up to 4 streams to one screen, currently 1 in use
         
-        - url: "http://187.157.229.132/mjpg/video.mjpg?timestamp=1603387350817"
         - url: "rtsp://admin:Admin123!@192.168.1.85:554/videoMain"
-        - url: "http://83.160.133.175/cgi-bin/faststream.jpg?stream=half&fps=15&rand=COUNTER"
-        - url: "http://193.40.60.204:10000/mjpg/video.mjpg"
+        
+        #- url: "rtsp://admin:Admin123!@192.168.1.85:554/videoMain"
+        #- url: "rtsp://admin:Admin123!@192.168.1.85:554/videoMain"
+        #- url: "rtsp://admin:Admin123!@192.168.1.85:554/videoMain"
 
 
 
