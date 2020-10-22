@@ -13,10 +13,13 @@ essentials:
       #otherwise rpisurv, by default, rearranges the screen to only show the connectable streams. To disable the latter set disable_probing_for_all_streams=True
       #Force this screen to be shown by pressing and holding F1 or keypad 0
     - camera_streams:
-
-        #- url: "rtsp://<user>:<password>@<ip or dnsname>:<port>/cam/realmonitor?channel=1&subtype=1"
+        # Trendnet camera stream sample
+        #- url: "rtsp://<user>:<password>@<camera IP>:<port 554>/videoMain"
         
         - url: "http://187.157.229.132/mjpg/video.mjpg?timestamp=1603387350817"
+        - url: "rtsp://admin:Admin123!@192.168.1.85:554/videoMain"
+        - url: "http://83.160.133.175/cgi-bin/faststream.jpg?stream=half&fps=15&rand=COUNTER"
+        - url: "http://193.40.60.204:10000/mjpg/video.mjpg"
 
 
 

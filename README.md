@@ -1,21 +1,34 @@
 # Rpisurv 2 - Raspberry pi surveillance an RPI IP Camera Monitor
 
+## Setting up RaspiOS and SDcard
+- diskutil list
+- diskutil unmountDisk /dev/diskN
+- sudo dd bs=1m if=path_of_your_image.img of=/dev/rdiskN; sync
+- sudo diskutil eject /dev/rdiskN
+
+
 ## Setup with PI
-- New Raspbian
-- terminal
-- cd Desktop
+- Startup setup, select lang, network etc
+- Open terminal (black icon on menu bar)
+- sudo apt update
+- sudo apt full-upgrade
 - mkdir rpisurv
 - cd rpisurv
 - git init
 - git remote add origin https://github.com/case112/rpisurv-cust
 - git pull origin master
 
+## Increase GPU memory
 - sudo nano /boot/config.txt
-- add gpu_mem=512
+- add this to last line: gpu_mem=512
+- ctrl + X, enter to save file
 
-- testida yhendust omxplayer rtsp://
-
+## Install rpisurv
 - sudo ./install.sh
+- reboot
+
+## Make modifications @ conf file
+- sudo nano /etc/rpisurv.conf
 
 
 
