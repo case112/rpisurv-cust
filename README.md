@@ -1,5 +1,3 @@
-# Rpisurv 2 - Raspberry pi surveillance an RPI IP Camera Monitor
-
 ## Cloning Raspberry Pi OS to SD card
 - Download and install Raspberry Pi Imager: https://www.raspberrypi.org/downloads/
 - Choose Raspberry Pi OS (32-bit), 1.1GB download
@@ -15,7 +13,7 @@
 - Open terminal (black icon on menu bar) and enter these commands:
 - `sudo nano /boot/config.txt`
 - add this to last line: `gpu_mem=512`
-- ctrl + X, and enter to save file
+- ctrl + X, enter to save file
 
 
 ## Cloning repository and installing rpisurv
@@ -28,26 +26,20 @@
 - `sudo ./install.sh`
 - `sudo reboot`
 
-## Make modifications @ conf file
-- hold letter `q` on keyboard
-- `sudo nano /etc/rpisurv.conf`
-
 ## Get new updates from git
+- hold letter `q` on keyboard to exit feed
 - `cd rpisurv`
 - `git pull remote origin`
 - `sudo ./install.sh`
 - `sudo reboot`
 
 
+## Update conf file
+- hold letter `q` on keyboard to exit feed
+- `sudo nano rpisurv/surveillance/conf/surveillance.yml`
+- make changes, ctrl + X, enter to save file
+- `cd rpisurv`
+- `sudo ./install.sh`
+- `sudo reboot`
 
 
-
-Extras: `git clone https://github.com/SvenVD/rpisurv`
-
-other notes
-
-## Setting up RaspiOS and SDcard with macOS
-- diskutil list
-- diskutil unmountDisk /dev/diskN
-- sudo dd bs=1m if=path_of_your_image.img of=/dev/rdiskN; sync
-- sudo diskutil eject /dev/rdiskN
